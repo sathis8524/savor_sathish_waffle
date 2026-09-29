@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Product Cart</title>
+  <link rel="stylesheet" href="../static/landing_page/css/style.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+body {
+  font-family: Arial;
+  background: rebeccapurple;
+  margin: 0;
+  padding: 20px;
+}
+.container1{
+  text-align: center;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  justify-content: center;
+}
+
+.card {
+  background:white;
+  width: 290px;
+  height: 380px;
+  padding: 50px;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.card img {
+  width: 100%;
+  height: 200px;
+  border-radius: 10px;
+}
+
+input {
+  width: 60px;
+  padding: 5px;
+  margin: 10px 0;
+}
+
+button {
+  margin: 5px;
+  padding: 8px 12px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+button:hover {
+  opacity: 0.9;
+}
+
+.buy {
+  background: orange;
+  color: white;
+}
+
+button:not(.buy) {
+  background: green;
+  color: white;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 500px) {
+  .container {
+    grid-template-columns: 1fr;
+  }
+}
+  </style>
+</head>
+<body>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>9 Product Cards</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+ <!--navbar-->
+
+  <nav class="navbar navbar-expand-lg navbar-dark" id="navbar">
+    <div class="container-fluid">
+     <a class="navbar-brand" href="#">SavorWaffle</a>
+     <img src="../static/landing_page/images/das.png.jpeg" class="img-fluid">
+     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+     </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mx-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="/home">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/about">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/contact">Contant</a>
+          </li>
+        </ul>
+        <div class="button-container">
+          <a href="/login" class="btn p-2 my-lg-0 my-2">Login</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+      
+  <!-- products -->
+
+    <div class="container1">
+      <h1>OUR PRODUCTS</h1>
+      <p>The Sweet Sting Of Indulgence</p>
+    </div>
+
+    <div class="container">
+      <!-- 1 Card -->
+      <div class="card">
+      <img src="../static/landing_page/images/coni.jpeg">
+      <h2>Kit Kat Crunch</h2>
+      <p>Total: ₹<span class="total">200</span></p>
+      <a href="/buynow?name=Kit Kat Crunch&price=200&img=coni.jpeg">
+       <button class="buy">Buy Now</button>
+      </a>
+    </div>
+
+    <!-- Copy same card (change name & price) -->
+    <div class="card">
+      <img src="../static/landing_page/images/coni1.jpeg">
+      <h2>Dark&White</h2>
+      <p>Total: ₹<span class="total">150</span></p>
+      <a href="/buynow?name=Dark White&price=150&img=coni1.jpeg">
+       <button class="buy">Buy Now</button>
+      </a>
+    </div>
+
+    <div class="card">
+     <img src="../static/landing_page/images/coni2.jpeg">
+     <h3>Caramel Nut</h3>
+     <p>Price: ₹<span class="price">250</span></p>
+     <a href="/buynow?name=Caramel Nut&price=250&img=coni2.jpeg">
+      <button class="buy">Buy Now</button>
+      </a>
+    </div>
+
+    <!-- Duplicate to make 9 cards -->
+    <div class="card">
+     <img src="../static/landing_page/images/coni3.jpeg">
+     <h3>Milk&Dark</h3>
+     <p>Total: ₹<span class="total">150</span></p>
+     <a href="/buynow?name=Milk Dark&price=150&img=coni3.jpeg">
+      <button class="buy">Buy Now</button>
+      </a>
+    </div>
+
+    <div class="card">
+      <img src="../static/landing_page/images/coni4.jpeg">
+      <h3>Oreo Fantacy</h3>
+      <p>Total: ₹<span class="total">180</span></p>
+      <a href="/buynow?name=Oreo Fantacy&price=180&img=coni4.jpeg">
+      <button class="buy">Buy Now</button>
+      </a>
+    </div>
+
+    <div class="card">
+      <img src="../static/landing_page/images/coni5.jpeg">
+      <h3>Paan Waffle</h3>
+      <p>Total: ₹<span class="total">250</span></p>
+      <a href="/buynow?name=Paan Waffle&price=250&img=coni5.jpeg">
+      <button class="buy">Buy Now</button>
+      </a>
+    </div>
+
+    <div class="card">
+      <img src="../static/landing_page/images/coni6.jpeg">
+      <h3>Naughty Nutella</h3>
+      <p>Total: ₹<span class="total">250</span></p>
+      <a href="/buynow?name=Naughty Nutella&price=250&img=coni6.jpeg">
+      <button class="buy">Buy Now</button>
+      </a>
+    </div>
+
+    <div class="card">
+      <img src="../static/landing_page/images/coni7.png">
+      <h3>White Strawberry</h3>
+      <p>Total: ₹<span class="total">200</span></p>
+      <a href="/buynow?name=White Strawberry&price=200&img=coni7.png">
+      <button class="buy">Buy Now</button>
+      </a>
+    </div>
+
+    <div class="card">
+      <img src="../static/landing_page/images/coni8.jpeg">
+      <h3>Waffle Sprinkles</h3>
+      <p>Total: ₹<span class="total">100</span></p>
+      <a href="/buynow?name=Product 1&price=100&img=coni8.jpeg">
+      <button class="buy">Buy Now</button>
+      </a>
+    </div>
+
+  </div>
+
+<script>
+function updateTotal(btn) {
+  let card = btn.parentElement;
+  let price = card.querySelector(".price").innerText;
+  let qty = card.querySelector(".qty").value;
+  let total = price * qty;
+  card.querySelector(".total").innerText = total;
+}
+
+</script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"></script>
+
+</body>
+</html>
+
+</body>
+</html>

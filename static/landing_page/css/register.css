@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css2?family=pooppins&display=swap');
+
+/* #register img{
+    width: 100px;
+    height: 300px;
+} */
+body{
+    height: 100vh;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    background: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,4)), url(../images/ch1.jpeg);
+}
+.register-box{
+    position: relative;
+    width: 650px;
+    padding: 40px;
+    margin-right: 60px;
+    border-radius: 10px;
+    box-shadow: 0 10px 10px rgba(0,0,0,0.3);   
+}
+.register-box h2{
+    text-align: center;
+    margin-bottom: 25px;
+    color: black;
+}
+form{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+.input-group{
+    margin-bottom:15px;
+}
+
+.input-group label{
+    font-size:14px;
+    color:whitesmoke;
+}
+.input-group input{
+    width:100%;
+    padding:10px;
+    margin-top:5px;
+    border:1px solid #ccc;
+    border-radius:5px;
+}
+select {
+    width: 300px;
+    padding: 7px;
+    border-radius: 5px;
+}
+.btn-singin{
+    width: 100%;
+    padding: 10px;
+    border: none;
+    background: #2e7d32;
+    color:#ccc;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transform:0.3s;
+}
+.btn-signin:hover{
+    background: #1b5e1b;
+}
+.links{
+    color: white;
+    text-align: center;
+    margin-top: 15px;
+    font-size: 14px;
+}
+.toggle-btn p{
+    color: wheat;
+}
+/* Responsive for mobile */
+@media(max-width:768px){
+    body{
+        justify-content:center;
+    }
+    .register-box{
+        margin-right:0;
+        width:90%;
+    }
+}
+
