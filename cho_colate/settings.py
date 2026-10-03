@@ -12,11 +12,15 @@ https://docs.djangoproject.com/en/5.1/ref/settings/
 
 from pathlib import Path
 import os
+from dotenv import load_dotenv
+import sys
+
+sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
 SECRET_KEY = 'your-secret-key'
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
-BASE_DIR = Path(__file__).resolve().parent.parent
+BASE_DIR = Path(__file__).resolve().parent.parent 
 
 
 # Quick-start development settings - unsuitable for production
@@ -134,10 +138,14 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 # sms
 FAST2SMS_API_KEY = "your_real_api_key_here"
 
+load_dotenv()
+
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_USE_TLS = True
 EMAIL_PORT = 587
-EMAIL_HOST_USER = '' #sender's email-id
-EMAIL_HOST_PASSWORD ='' #password associated with above email-id (not the regular password)
+EMAIL_HOST_USER = os.getenv('EMAIL_HOST_USER') #sender's email-id
+EMAIL_HOST_PASSWORD =os.getenv('EMAIL_HOST_PASSWORD') #password associated with above email-id (not the regular password)
+print("EMAIL USER:", os.getenv('EMAIL_HOST_USER'))
+print("EMAIL PASS:", os.getenv('EMAIL_HOST_PASSWORD'))
 

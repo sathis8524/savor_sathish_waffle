@@ -11,6 +11,9 @@ class customer_register_table(models.Model):
     password=models.CharField(max_length=100)
     register_dt=models.CharField(max_length=100)
 
+    def __str__(self):
+        return f"{self.full_name} - {self.email_id}"
+
 class Order(models.Model):
     product_name=models.CharField(max_length=100)
     price=models.IntegerField()
